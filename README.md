@@ -156,33 +156,47 @@ The following steps were performed to clean the dataset and prepare it for segme
 ```python
 # [In 4]: Remove duplicate rows  
 ecommerce_retail = ecommerce_retail.drop_duplicates()
+```
 
+```python
 # [In 5]: Remove rows with missing CustomerID  
 ecommerce_retail = ecommerce_retail.dropna(subset=['CustomerID'])
+```
 
+```python
 # [In 6]: Keep only rows where Quantity > 0  
 ecommerce_retail = ecommerce_retail[ecommerce_retail['Quantity'] > 0]
+```
 
+```python
 # [In 7]: Keep only rows where UnitPrice > 0  
 ecommerce_retail = ecommerce_retail[ecommerce_retail['UnitPrice'] > 0]
+```
 
+```python
 # [In 8]: Keep only rows with valid StockCode (5-digit numbers)  
 ecommerce_retail = ecommerce_retail[
     ecommerce_retail['StockCode'].astype(str).str.fullmatch(r'\d{5}')
 ]
+```
 
+```python
 # [In 9]: Visualize outliers in Quantity  
 plt.figure(figsize=(10, 4))
 sns.boxplot(x=ecommerce_retail['Quantity'])
 plt.title('Boxplot of Quantity')
 plt.show()
+```
 
+```python
 # [In 10]: Visualize outliers in UnitPrice  
 plt.figure(figsize=(10, 4))
 sns.boxplot(x=ecommerce_retail['UnitPrice'])
 plt.title('Boxplot of Unit Price')
 plt.show()
+```
 
+```python
 # [In 11]: Calculate percentage of Quantity outliers using IQR  
 Q1_quantity = ecommerce_retail['Quantity'].quantile(0.25)
 Q3_quantity = ecommerce_retail['Quantity'].quantile(0.75)
@@ -195,7 +209,9 @@ outlier_quantity = ecommerce_retail[
 ]
 outlier_percent_quantity = len(outlier_quantity) / len(ecommerce_retail) * 100
 print(f'Outlier Quantity accounts for: {outlier_percent_quantity: .2f}%')
+```
 
+```python
 # [In 12]: Calculate percentage of UnitPrice outliers using IQR  
 Q1_price = ecommerce_retail['UnitPrice'].quantile(0.25)
 Q3_price = ecommerce_retail['UnitPrice'].quantile(0.75)
@@ -208,14 +224,19 @@ outliers_price = ecommerce_retail[
 ]
 outlier_percent_price = len(outliers_price) / len(ecommerce_retail) * 100
 print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
+```
 
+```python
 # [In 13]: Create a new column for Revenue  
 ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['UnitPrice']
+```
 
+```python
 # [In 14]: Filter out top 5% Revenue to handle outliers  
 threshold_98 = ecommerce_retail['Revenue'].quantile(0.95)
 ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_98]
 ```
+
 
  
 
