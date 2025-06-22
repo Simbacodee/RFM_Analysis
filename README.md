@@ -96,14 +96,35 @@ Sheet 2: Segmentation
 
 ```python
 
-# Print the first five rows of the dataset
-ecommerce.head()
+# Check the general information of df
+ecommerce.info()
 ```
 [Out 1]:  
 
-![image](https://github.com/user-attachments/assets/cd73860d-94ca-409a-a685-936dc82d176c)
+![image](https://github.com/user-attachments/assets/cd73860d-94ca-409a-a685-936dc82d176c)  
 
+[In 2]:  
 
+```python
+
+# Check data summary
+ecommerce.describe()
+```
+[Out 2]:  
+
+![image](https://github.com/user-attachments/assets/213d6feb-c51c-4e71-aca3-b080cac02121)  
+
+[In 3]:  
+
+```python
+
+# Print the first five rows of the dataset
+ecommerce.head()
+```
+[Out 3]:  
+
+![image](https://github.com/user-attachments/assets/9cafe599-3e0f-4af5-bc2e-27023c91e530)
+ 
 To understand the data structure and assess its quality, the following initial steps were taken:
 
 - **Dataset Overview:**
