@@ -39,15 +39,8 @@ Tools Used: Python
 
 ### 👤 Who is this project for?  
 
-Mention who might benefit from this project 
-
- _Example:_
-
-✔️ Data analysts & business analysts  
-✔️ Decision-makers & stakeholders  
-
-
-
+- Marketing Manager  
+- Data Analyst  
 ---
 
 ## 📂 Dataset Description & Data Structure  
