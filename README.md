@@ -46,10 +46,9 @@ Tools Used: Python
 ## 📂 Dataset Description & Data Structure  
 
 ### 📌 Data Source  
-- Source: (Mention where the dataset is obtained from—Kaggle, company database, government sources, etc.)  
-- Size: (Mention the number of rows & columns)  
-- Format: (.csv, .sql, .xlsx, etc.)  
-
+- Source: Provided dataset for E-commerce retail analysis
+- Size: 541,910 rows × 8 columns (Sheet 1: E-commerce retail), additional segmentation details in Sheet 2
+- Format: .xlsx (Excel file with two sheets)
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used:  
