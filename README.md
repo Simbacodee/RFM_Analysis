@@ -151,50 +151,58 @@ To understand the data structure and assess its quality, the following initial s
 
 ### 2️⃣ Data Cleaning
 
-The following steps were performed to clean the dataset and prepare it for segmentation:
+The following steps were performed to clean the dataset and prepare it for segmentation:  
 
+ [In 4]: 
 ```python
-# [In 4]: Remove duplicate rows  
+# Remove duplicate rows  
 ecommerce_retail = ecommerce_retail.drop_duplicates()
 ```
-
+ [In 5]: 
 ```python
-# [In 5]: Remove rows with missing CustomerID  
+# Remove rows with missing CustomerID  
 ecommerce_retail = ecommerce_retail.dropna(subset=['CustomerID'])
 ```
-
+ [In 6]:
 ```python
-# [In 6]: Keep only rows where Quantity > 0  
+# Keep only rows where Quantity > 0  
 ecommerce_retail = ecommerce_retail[ecommerce_retail['Quantity'] > 0]
 ```
-
+ [In 7]: 
 ```python
-# [In 7]: Keep only rows where UnitPrice > 0  
+# Keep only rows where UnitPrice > 0  
 ecommerce_retail = ecommerce_retail[ecommerce_retail['UnitPrice'] > 0]
 ```
-
+ [In 8]: 
 ```python
-# [In 8]: Keep only rows with valid StockCode (5-digit numbers)  
+# Keep only rows with valid StockCode (5-digit numbers)  
 ecommerce_retail = ecommerce_retail[
     ecommerce_retail['StockCode'].astype(str).str.fullmatch(r'\d{5}')
 ]
 ```
-
+[In 9]: 
 ```python
-# [In 9]: Visualize outliers in Quantity  
+# Visualize outliers in Quantity  
 plt.figure(figsize=(10, 4))
 sns.boxplot(x=ecommerce_retail['Quantity'])
 plt.title('Boxplot of Quantity')
 plt.show()
 ```
+[Out 9]:  
 
+![image](https://github.com/user-attachments/assets/1fd7f406-6c46-4d02-abcf-c7e91fa758ce)
+
+[In 10]: 
 ```python
-# [In 10]: Visualize outliers in UnitPrice  
+# Visualize outliers in UnitPrice  
 plt.figure(figsize=(10, 4))
 sns.boxplot(x=ecommerce_retail['UnitPrice'])
 plt.title('Boxplot of Unit Price')
 plt.show()
 ```
+[Out 10]: 
+
+![image](https://github.com/user-attachments/assets/292c3f42-47f5-41a5-8052-117567d62721)
 
 ```python
 # [In 11]: Calculate percentage of Quantity outliers using IQR  
