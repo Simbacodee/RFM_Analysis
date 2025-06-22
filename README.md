@@ -91,11 +91,27 @@ Sheet 2: Segmentation
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-![image](https://github.com/user-attachments/assets/3b4688ea-b8aa-44b0-8102-4f37f09a0ef6)  
+### 1️⃣ Initial Exploration
 
-![image](https://github.com/user-attachments/assets/d152860c-8501-456e-8089-22f0379c12e9)  
+To understand the data structure and assess its quality, the following initial steps were taken:
 
-![image](https://github.com/user-attachments/assets/67d21e45-f11a-4841-95bc-2edc0e29fccf)
+- **Dataset Overview:**
+  - The dataset contains **541,909 rows** and **8 columns**.
+  - Used `.info()` to check data types and null values.
+  - Used `.head()` to view sample transactions.
+
+- **Descriptive Statistics:**
+  - `.describe()` revealed unusually large negative values in `Quantity` and `UnitPrice`.
+  - Example: `Quantity` min = -80,995; `UnitPrice` min = -11,062 — which are not logically valid.
+
+- **Data Type Review:**
+  - No mismatched data types were detected.
+  - However, some columns like `InvoiceNo`, `StockCode`, and `CustomerID` were later cast to `string` for better processing.
+
+- **Missing & Duplicate Values:**
+  - `CustomerID`: ~0.27% missing → Critical for segmentation → **to be removed**.
+  - `Description`: ~25% missing → Retained (not used in RFM).
+  - Duplicate rows: 5,268 duplicates found → **to be removed**.
 
 
 
