@@ -145,9 +145,11 @@ To understand the data structure and assess its quality, the following initial s
   - `Description`: ~25% missing → Retained (not used in RFM).
   - Duplicate rows: 5,268 duplicates found → **to be removed**.
 
- - **Outliers Identified:**
-  - `Quantity`: Values range from **-80,995** to **80,995**, with a median of just **3**. This wide spread and presence of negative values indicate possible outliers and cancelled transactions.
-  - `UnitPrice`: Ranges from **-11,062** to **38,970**, while 75% of values are under **4.13**. These extremes suggest likely data entry errors.
+- **Outliers Identified:**
+  - `Quantity`: Values range from **-80,995** to **80,995**, with a median of just **3**. This wide spread and the presence of negative values indicate outliers, often linked to cancelled transactions.
+  - `UnitPrice`: Ranges from **-11,062** to **38,970**, while 75% of prices are below **4.13**. These extremes suggest likely data entry errors or invalid records.
+
+
  
 
 
