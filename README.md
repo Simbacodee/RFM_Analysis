@@ -1,6 +1,7 @@
 # 📊 RFM Customer Segmentation | Python
 ---
-![Uploading ChatGPT Image 21_43_18 22 thg 6, 2025.png…]()
+![ChatGPT Image 21_43_18 22 thg 6, 2025](https://github.com/user-attachments/assets/4f670ab7-d3bb-4822-abdb-66503e9ea59d)
+
 
 
 
