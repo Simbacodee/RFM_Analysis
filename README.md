@@ -248,6 +248,7 @@ ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['U
 threshold_98 = ecommerce_retail['Revenue'].quantile(0.95)
 ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_98]
 ```
+---
 
 ## 🧮 Apply RFM Model  
 
@@ -264,6 +265,29 @@ rfm = ecom_filtered.groupby('CustomerID').agg({
 
 rfm.columns = ['CustomerID','Recency', 'Frequency', 'Monetary']
 ```
+[In 14]: 
+```python
+# Score each customer based on Recency, Frequency, and Monetary value (RFM),
+# then map combined RFM scores to predefined customer segments
+
+rfm['R_score'] = pd.qcut(rfm['Recency'], q=5, labels=[5, 4, 3, 2, 1])
+rfm['F_score'] = pd.qcut(rfm['Frequency'], q=5, labels=[1, 2, 3, 4, 5])
+rfm['M_score'] = pd.qcut(rfm['Monetary'], q=5, labels=[1, 2, 3, 4, 5])
+
+rfm['RFM_score'] = rfm['R_score'].astype(str) + rfm['F_score'].astype(str) + rfm['M_score'].astype(str)
+
+segmentation_data = segmentation_data.rename(columns={"RFM Score": "RFM_score"})
+
+df_segment = segmentation_data.assign(
+    RFM_score=segmentation_data['RFM_score'].astype(str).str.split(', ')
+).explode('RFM_score')
+
+rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
+
+```
+[Out 14]:
+
+![image](https://github.com/user-attachments/assets/a064feda-02e9-4078-8eb4-7eb3c6c7f3e9)
 
 ---
 
