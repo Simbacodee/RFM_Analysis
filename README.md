@@ -204,8 +204,10 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/292c3f42-47f5-41a5-8052-117567d62721)
 
+[In 11]:
+
 ```python
-# [In 11]: Calculate percentage of Quantity outliers using IQR  
+# Calculate percentage of Quantity outliers using IQR  
 Q1_quantity = ecommerce_retail['Quantity'].quantile(0.25)
 Q3_quantity = ecommerce_retail['Quantity'].quantile(0.75)
 IQR_quantity = Q3_quantity - Q1_quantity
@@ -217,10 +219,8 @@ outlier_quantity = ecommerce_retail[
 ]
 outlier_percent_quantity = len(outlier_quantity) / len(ecommerce_retail) * 100
 print(f'Outlier Quantity accounts for: {outlier_percent_quantity: .2f}%')
-```
 
-```python
-# [In 12]: Calculate percentage of UnitPrice outliers using IQR  
+# Calculate percentage of UnitPrice outliers using IQR  
 Q1_price = ecommerce_retail['UnitPrice'].quantile(0.25)
 Q3_price = ecommerce_retail['UnitPrice'].quantile(0.75)
 IQR_price = Q3_price - Q1_price
@@ -233,23 +233,21 @@ outliers_price = ecommerce_retail[
 outlier_percent_price = len(outliers_price) / len(ecommerce_retail) * 100
 print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
 ```
+[Out 11]:
 
+![image](https://github.com/user-attachments/assets/e4ba9c01-c45a-4454-8a05-514b9703cbe6)
+
+Since the percentage of outliers in `Quantity` (~6.5%) and `UnitPrice` (~8.8%) is significant,  
+instead of removing them directly, we chose to cap extreme values based on the **98th percentile of Revenue**.
+
+[In 13]: 
 ```python
-# [In 13]: Create a new column for Revenue  
+# Create a new column for Revenue  
 ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['UnitPrice']
-```
-
-```python
-# [In 14]: Filter out top 5% Revenue to handle outliers  
+# Filter out top 5% Revenue to handle outliers  
 threshold_98 = ecommerce_retail['Revenue'].quantile(0.95)
 ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_98]
 ```
-
-
- 
-
-
-
 
 ## 🧮 Apply RFM Model  
 
