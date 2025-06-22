@@ -295,4 +295,49 @@ rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
 
 ![image](https://github.com/user-attachments/assets/f19a0546-39f3-42b2-ae6a-65f7fd2a6a91)
 
+💡 Insights from Customer Segmentation (RFM Treemap)
+Hibernating Customers account for 20.29% – the largest segment.
+→ These are customers who haven't purchased in a long time and generate low revenue.
 
+Champions make up 19.41%.
+→ They are recent, high-spending, and highly engaged customers.
+
+Potential Loyalists and Loyal Customers together account for ~20.6%.
+→ These customers show promising behavior and should be nurtured into long-term loyalty.
+
+Lost Customers and At Risk segments total ~19.3%.
+→ These are customers who have reduced or stopped engagement and are likely to churn.
+
+New Customers only represent 7.66%.
+→ The rate of acquiring and converting new users is relatively low.  
+
+✅ Recommendations
+Retain Champions & Loyal Customers (~28.8%)
+
+Launch exclusive loyalty programs or VIP rewards.
+
+Offer early access to new products or personalized discounts.
+
+Re-engage Hibernating & At-Risk Customers (~30%)
+
+Send “We Miss You” campaigns with time-limited incentives.
+
+Use retargeting ads or personalized reactivation emails.
+
+Nurture Potential Loyalists & New Customers
+
+Guide them with post-purchase follow-ups or onboarding emails.
+
+Include them in referral programs or special welcome offers.
+
+Investigate Lost Customers
+
+Identify churn reasons (e.g., pricing, product experience, service).
+
+Consider feedback surveys or win-back promotions.
+
+Improve Customer Acquisition
+
+Invest in targeted marketing (social ads, SEO, influencer campaigns).
+
+Optimize the first-time buyer journey for better conversion.
