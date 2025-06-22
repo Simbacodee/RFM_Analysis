@@ -89,7 +89,7 @@ Sheet 2: Segmentation
 
 ---
 
-## ⚒️ Main Process
+## 📊 Exploratory Data Analysis (EDA)
 
 1️⃣ Data Cleaning & Preprocessing  
 2️⃣ Exploratory Data Analysis (EDA)  
@@ -105,7 +105,18 @@ Sheet 2: Segmentation
 
 ---
 
-## 🔎 Final Conclusion & Recommendations  
+## 🧮 Apply RFM Model  
+
+👉🏻 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:  
+
+📌 Key Takeaways:  
+✔️ Recommendation 1  
+✔️ Recommendation 2  
+✔️ Recommendation 3  
+
+---
+
+## 📊 Visualization & Analysis  
 
 👉🏻 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:  
 
