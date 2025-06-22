@@ -92,12 +92,17 @@ Sheet 2: Segmentation
 ## 📊 Exploratory Data Analysis (EDA)
 
 ### 1️⃣ Initial Exploration
+[In 1]:  
 
 ```python
 
-Print the first five rows of the dataset
+# Print the first five rows of the dataset
 ecommerce.head()
 ```
+[Out 1]:  
+
+![image](https://github.com/user-attachments/assets/cd73860d-94ca-409a-a685-936dc82d176c)
+
 
 To understand the data structure and assess its quality, the following initial steps were taken:
 
