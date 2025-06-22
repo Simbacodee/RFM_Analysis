@@ -93,7 +93,10 @@ Sheet 2: Segmentation
 
 ![image](https://github.com/user-attachments/assets/3b4688ea-b8aa-44b0-8102-4f37f09a0ef6)  
 
-![image](https://github.com/user-attachments/assets/d152860c-8501-456e-8089-22f0379c12e9)
+![image](https://github.com/user-attachments/assets/d152860c-8501-456e-8089-22f0379c12e9)  
+
+![image](https://github.com/user-attachments/assets/67d21e45-f11a-4841-95bc-2edc0e29fccf)
+
 
 
 
