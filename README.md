@@ -14,11 +14,10 @@ Tools Used: Python
 ## 📑 Table of Contents  
 
 1. [📌 Background & Overview](#-background--overview)  
-2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)  
-3. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)  
-4. [📊 Exploratory Data Analysis (EDA)](#-exploratory-data-analysis-eda)  
-5. [🧮 Apply RFM Model](#-apply-rfm-model)  
-6. [📊 Visualization & Analysis](#-visualization--analysis)  
+2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)   
+3. [📊 Exploratory Data Analysis (EDA)](#-exploratory-data-analysis-eda)  
+4. [🧮 Apply RFM Model](#-apply-rfm-model)  
+5. [📊 Visualization & Analysis](#-visualization--analysis)  
 
 
 
