@@ -295,7 +295,7 @@ rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
 
 ![image](https://github.com/user-attachments/assets/f19a0546-39f3-42b2-ae6a-65f7fd2a6a91)
 
-**🧠 Insights from RFM Treemap Visualization:**
+**🧠 Insights**
 
 - 🔵 **Hibernating Customers** (20.29%) are the **largest group**  
   → Long-inactive, low-value customers.
@@ -312,9 +312,7 @@ rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
 - 🟠 **New Customers** (7.66%)  
   → Low proportion, indicating limited recent acquisition.
 
----
-
-**✅ Recommended Actions:**
+**✅ Recommended**
 
 - 🎯 *Retain Champions & Loyal Customers*  
   → Create VIP benefits, offer exclusive early-access promotions.
