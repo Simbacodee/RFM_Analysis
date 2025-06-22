@@ -93,6 +93,12 @@ Sheet 2: Segmentation
 
 ### 1️⃣ Initial Exploration
 
+```python
+
+Print the first five rows of the dataset
+ecommerce.head()
+```
+
 To understand the data structure and assess its quality, the following initial steps were taken:
 
 - **Dataset Overview:**
