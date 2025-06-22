@@ -59,12 +59,16 @@ The dataset consists of two tables (sheets):
 
 Sheet 1: Ecommerce Retail  
 
-| Column Name | Data Type | Description |  
-|-------------|----------|-------------|  
-| InvoiceNo   | INT      | Unique identifier for each product |  
-| StockCode        | TEXT     | Product name |  
-| Category    | TEXT     | Product category |  
-| Price       | FLOAT    | Price per unit |  
+| Column Name | Data Type        | Description                                                                 |
+|-------------|------------------|-----------------------------------------------------------------------------|
+| InvoiceNo   | object            | Unique invoice number for each transaction (6-digit). If it starts with 'C', it indicates a cancellation. |
+| StockCode   | object            | Unique product (item) code (5-digit).                                      |
+| Description | object            | Product (item) name.                                                       |
+| Quantity    | int64             | The number of units purchased per transaction.                             |
+| InvoiceDate | datetime64[ns]    | Date and time when the transaction occurred.                               |
+| UnitPrice   | float64           | Price per unit of the product in sterling.                                 |
+| CustomerID  | float64           | Unique 5-digit identifier for each customer.                               |
+| Country     | object            | Name of the country where the customer resides.   
 
 
 Table 2: Sales Transactions  
