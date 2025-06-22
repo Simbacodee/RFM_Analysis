@@ -1,6 +1,7 @@
 # 📊 RFM Customer Segmentation | Python
 ---
-![KPMG Transaction Analysis](https://github.com/Dorothy-Ho-Vy/Sample_SQL_Python_template/blob/4dee6ff56077b90b1aea82e8517136f7185a77a3/Blue%20White%20Modern%20Payment%20Gateway%20Service%20Twitter%20Post.png.crdownload)
+![Uploading ChatGPT Image 21_43_18 22 thg 6, 2025.png…]()
+
 
 
 Author: Duong Chi Tuan  
