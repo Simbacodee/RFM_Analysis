@@ -59,16 +59,10 @@ The dataset consists of two tables (sheets):
 
 Sheet 1: Ecommerce Retail  
 
-👉🏻 Insert a screenshot of table schema 
-
-📌If the table is too big, only capture a part of it that contains key metrics you used in the projects or put the table in toggle
-
- _Example:_
-
 | Column Name | Data Type | Description |  
 |-------------|----------|-------------|  
-| Product_ID  | INT      | Unique identifier for each product |  
-| Name        | TEXT     | Product name |  
+| InvoiceNo   | INT      | Unique identifier for each product |  
+| StockCode        | TEXT     | Product name |  
 | Category    | TEXT     | Product category |  
 | Price       | FLOAT    | Price per unit |  
 
