@@ -295,49 +295,44 @@ rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
 
 ![image](https://github.com/user-attachments/assets/f19a0546-39f3-42b2-ae6a-65f7fd2a6a91)
 
-💡 Insights from Customer Segmentation (RFM Treemap)
-Hibernating Customers account for 20.29% – the largest segment.
-→ These are customers who haven't purchased in a long time and generate low revenue.
+## 💡 Insights from Customer Segmentation (RFM Treemap)
 
-Champions make up 19.41%.
-→ They are recent, high-spending, and highly engaged customers.
+- 🔵 **Hibernating Customers** — 20.29% *(largest segment)*  
+  → Haven’t purchased in a long time and generate low revenue.
 
-Potential Loyalists and Loyal Customers together account for ~20.6%.
-→ These customers show promising behavior and should be nurtured into long-term loyalty.
+- 🟢 **Champions** — 19.41%  
+  → Recent, high-spending, and highly engaged customers.
 
-Lost Customers and At Risk segments total ~19.3%.
-→ These are customers who have reduced or stopped engagement and are likely to churn.
+- 🟡 **Potential Loyalists + Loyal Customers** — ~20.6%  
+  → Promising behavior, should be nurtured into long-term loyalty.
 
-New Customers only represent 7.66%.
-→ The rate of acquiring and converting new users is relatively low.  
+- 🔴 **Lost Customers + At Risk** — ~19.3%  
+  → Likely to churn due to decreased or stopped engagement.
 
-✅ Recommendations
-Retain Champions & Loyal Customers (~28.8%)
+- 🟠 **New Customers** — 7.66%  
+  → Low acquisition/conversion rate for new users.
 
-Launch exclusive loyalty programs or VIP rewards.
+---
 
-Offer early access to new products or personalized discounts.
+## ✅ Recommendations
 
-Re-engage Hibernating & At-Risk Customers (~30%)
+### 🎯 Retain Champions & Loyal Customers (~28.8%)
+- Launch exclusive **loyalty programs** or **VIP rewards**.
+- Offer **early access** to products or **personalized discounts**.
 
-Send “We Miss You” campaigns with time-limited incentives.
+### 🔄 Re-engage Hibernating & At-Risk Customers (~30%)
+- Run **"We Miss You"** campaigns with limited-time offers.
+- Use **retargeting ads** or **reactivation emails**.
 
-Use retargeting ads or personalized reactivation emails.
+### 🌱 Nurture Potential Loyalists & New Customers
+- Send **follow-ups**, **onboarding emails**, or product guides.
+- Include in **referral programs** or **welcome incentives**.
 
-Nurture Potential Loyalists & New Customers
+### 🧩 Investigate Lost Customers
+- Identify churn reasons (e.g., price, product, experience).
+- Use **feedback surveys** or **win-back campaigns**.
 
-Guide them with post-purchase follow-ups or onboarding emails.
+### 🚀 Improve Customer Acquisition
+- Invest in **targeted marketing** (SEO, social, influencers).
+- Optimize the **first-time buyer journey** for conversion.
 
-Include them in referral programs or special welcome offers.
-
-Investigate Lost Customers
-
-Identify churn reasons (e.g., pricing, product experience, service).
-
-Consider feedback surveys or win-back promotions.
-
-Improve Customer Acquisition
-
-Invest in targeted marketing (social ads, SEO, influencer campaigns).
-
-Optimize the first-time buyer journey for better conversion.
