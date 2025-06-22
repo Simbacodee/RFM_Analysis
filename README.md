@@ -52,8 +52,9 @@ Tools Used: Python
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used:  
-Mention how many tables are in the dataset.  
-
+The dataset consists of two tables (sheets):  
+- Sheet 1: Ecommerce Retail – Contains transactional data from a UK-based online retail store, covering all orders between December 1, 2010 and December 9, 2011. The company specializes in selling unique all-occasion gifts. The majority of its customers are wholesalers, making this dataset well-suited for customer segmentation and purchasing behavior analysis.
+- Sheet 2: Segmentation – Contains the RFM score combinations used to classify customers into different segments. Each record maps a specific RFM score (e.g., 555, 344, 211) to a customer label such as “Loyal Customer”, “At Risk”, or “New Customer”.  
 #### 2️⃣ Table Schema & Data Snapshot  
 
 Table 1: Products Table  
