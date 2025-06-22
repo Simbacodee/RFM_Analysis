@@ -237,8 +237,8 @@ print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
 
 ![image](https://github.com/user-attachments/assets/e4ba9c01-c45a-4454-8a05-514b9703cbe6)
 
-Since the percentage of outliers in `Quantity` (~6.5%) and `UnitPrice` (~8.8%) is significant,  
-instead of removing them directly, we chose to cap extreme values based on the **98th percentile of Revenue**.
+> ⚠️ **Note:** Since the percentage of outliers in `Quantity` (~6.5%) and `UnitPrice` (~8.8%) is significant,  
+> instead of removing them directly, we chose to cap extreme values based on the **98th percentile of Revenue**.
 
 [In 13]: 
 ```python
