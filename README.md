@@ -293,5 +293,6 @@ rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
 
 ## 📊 Visualization & Analysis  
 
-![image](https://github.com/user-attachments/assets/55b1c3c2-ec59-40b7-a48f-f019536594dc)
+![image](https://github.com/user-attachments/assets/f19a0546-39f3-42b2-ae6a-65f7fd2a6a91)
+
 
