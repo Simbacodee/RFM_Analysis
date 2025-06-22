@@ -29,19 +29,13 @@ Tools Used: Python
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-Clearly outline what this project does, what business questions the project will solve. 
+- SuperStore is a global retail company with a rapidly growing customer base. As the holiday season approaches, the Marketing team is planning to run appreciation campaigns for existing customers and identify high-potential buyers who can be nurtured into loyal customers.
 
-- Provide a brief introduction - Write in bullet point format
-- Point out the main business question
+- In previous years, customer segmentation was handled manually using spreadsheets due to the smaller scale of data. However, with the increasing volume of transactions and customers, manual segmentation is no longer feasible.
 
+- To address this, the Marketing department has requested support from the Data Analytics team to automate customer segmentation. Specifically, they proposed leveraging the RFM (Recency, Frequency, Monetary) model to classify customers into meaningful groups for targeted marketing.
 
- _Example:_
-  This project uses Python to analyze transaction data from KPMG to:
-
-✔️ Identify the behavior in customer's first transaction.  
-✔️ Provide actionable insights to increase retention rate   
- 
-
+- This project aims to build a robust and scalable RFM segmentation pipeline using Python, enabling the business to better understand customer behavior and execute personalized marketing strategies efficiently.
 
 ### 👤 Who is this project for?  
 
