@@ -57,7 +57,7 @@ The dataset consists of two tables (sheets):
 - Sheet 2: Segmentation – Contains the RFM score combinations used to classify customers into different segments. Each record maps a specific RFM score (e.g., 555, 344, 211) to a customer label such as “Loyal Customer”, “At Risk”, or “New Customer”.  
 #### 2️⃣ Table Schema & Data Snapshot  
 
-Table 1: Products Table  
+Sheet 1: Ecommerce Retail  
 
 👉🏻 Insert a screenshot of table schema 
 
