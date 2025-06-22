@@ -91,19 +91,11 @@ Sheet 2: Segmentation
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-1️⃣ Data Cleaning & Preprocessing  
-2️⃣ Exploratory Data Analysis (EDA)  
-3️⃣ SQL/ Python Analysis 
+![image](https://github.com/user-attachments/assets/3b4688ea-b8aa-44b0-8102-4f37f09a0ef6)  
 
-- First, explain codes' purpose - what they do
+![image](https://github.com/user-attachments/assets/d152860c-8501-456e-8089-22f0379c12e9)
 
-- Then how your query/ code & Insert screenshots of your result
 
-- Finally, explain your observations/ findings from the results  ts findings
-  
- _Describe trends, key metrics, and patterns._  
-
----
 
 ## 🧮 Apply RFM Model  
 
