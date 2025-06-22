@@ -3,9 +3,9 @@
 ![KPMG Transaction Analysis](https://github.com/Dorothy-Ho-Vy/Sample_SQL_Python_template/blob/4dee6ff56077b90b1aea82e8517136f7185a77a3/Blue%20White%20Modern%20Payment%20Gateway%20Service%20Twitter%20Post.png.crdownload)
 
 
-Author: Duong Chi Tuan 
-Date: June 2025 
-Tools Used: Python  
+Author: Duong Chi Tuan  
+Date: June 2025  
+Tools Used: Python   
 
 ---
 
