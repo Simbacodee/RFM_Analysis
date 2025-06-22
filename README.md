@@ -240,7 +240,7 @@ print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
 > ⚠️ **Note:** Since the percentage of outliers in `Quantity` (~6.5%) and `UnitPrice` (~8.8%) is significant,  
 > instead of removing them directly, we chose to cap extreme values based on the **98th percentile of Revenue**.
 
-[In 13]: 
+[In 12]: 
 ```python
 # Create a new column for Revenue  
 ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['UnitPrice']
@@ -251,12 +251,19 @@ ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_
 
 ## 🧮 Apply RFM Model  
 
-👉🏻 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:  
+[In 13]: 
+```python
+# Generate RFM (Recency, Frequency, Monetary) table for customer segmentation  
+snapshot_date = pd.to_datetime('2011-12-31')
+ecom_filtered = ecommerce_retail_98[ecommerce_retail_98['InvoiceDate'] <= snapshot_date]
+rfm = ecom_filtered.groupby('CustomerID').agg({
+    'InvoiceDate': lambda x: (snapshot_date - x.max()).days,
+    'InvoiceNo': 'count',
+    'Revenue': 'sum'
+}).reset_index()
 
-📌 Key Takeaways:  
-✔️ Recommendation 1  
-✔️ Recommendation 2  
-✔️ Recommendation 3  
+rfm.columns = ['CustomerID','Recency', 'Frequency', 'Monetary']
+```
 
 ---
 
