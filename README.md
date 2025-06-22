@@ -141,14 +141,17 @@ To understand the data structure and assess its quality, the following initial s
   - However, some columns like `InvoiceNo`, `StockCode`, and `CustomerID` were later cast to `string` for better processing.
 
 - **Missing & Duplicate Values:**
-  - `CustomerID`: ~0.27% missing → Critical for segmentation → **to be removed**.
+  - `CustomerID`: ~0.27% missing → Critical for segmentation.
   - `Description`: ~25% missing → Retained (not used in RFM).
-  - Duplicate rows: 5,268 duplicates found → **to be removed**.
+  - Duplicate rows: 5,268 duplicates found.
 
 - **Outliers Identified:**
   - `Quantity`: Values range from **-80,995** to **80,995**, with a median of just **3**. This wide spread and the presence of negative values indicate outliers, often linked to cancelled transactions.
   - `UnitPrice`: Ranges from **-11,062** to **38,970**, while 75% of prices are below **4.13**. These extremes suggest likely data entry errors or invalid records.
 
+## 2️⃣ 🧹 Data Cleaning
+
+After the initial exploration, several data quality issues were identified that could affect the accuracy of RFM-based segmentation. This section outlines the steps taken to clean the dataset and prepare it for analysis.
 
  
 
