@@ -149,9 +149,73 @@ To understand the data structure and assess its quality, the following initial s
   - `Quantity`: Values range from **-80,995** to **80,995**, with a median of just **3**. This wide spread and the presence of negative values indicate outliers, often linked to cancelled transactions.
   - `UnitPrice`: Ranges from **-11,062** to **38,970**, while 75% of prices are below **4.13**. These extremes suggest likely data entry errors or invalid records.
 
-## 2️⃣ 🧹 Data Cleaning
+### 2️⃣ Data Cleaning
 
-After the initial exploration, several data quality issues were identified that could affect the accuracy of RFM-based segmentation. This section outlines the steps taken to clean the dataset and prepare it for analysis.
+The following steps were performed to clean the dataset and prepare it for segmentation:
+
+```python
+# [In 4]: Remove duplicate rows  
+ecommerce_retail = ecommerce_retail.drop_duplicates()
+
+# [In 5]: Remove rows with missing CustomerID  
+ecommerce_retail = ecommerce_retail.dropna(subset=['CustomerID'])
+
+# [In 6]: Keep only rows where Quantity > 0  
+ecommerce_retail = ecommerce_retail[ecommerce_retail['Quantity'] > 0]
+
+# [In 7]: Keep only rows where UnitPrice > 0  
+ecommerce_retail = ecommerce_retail[ecommerce_retail['UnitPrice'] > 0]
+
+# [In 8]: Keep only rows with valid StockCode (5-digit numbers)  
+ecommerce_retail = ecommerce_retail[
+    ecommerce_retail['StockCode'].astype(str).str.fullmatch(r'\d{5}')
+]
+
+# [In 9]: Visualize outliers in Quantity  
+plt.figure(figsize=(10, 4))
+sns.boxplot(x=ecommerce_retail['Quantity'])
+plt.title('Boxplot of Quantity')
+plt.show()
+
+# [In 10]: Visualize outliers in UnitPrice  
+plt.figure(figsize=(10, 4))
+sns.boxplot(x=ecommerce_retail['UnitPrice'])
+plt.title('Boxplot of Unit Price')
+plt.show()
+
+# [In 11]: Calculate percentage of Quantity outliers using IQR  
+Q1_quantity = ecommerce_retail['Quantity'].quantile(0.25)
+Q3_quantity = ecommerce_retail['Quantity'].quantile(0.75)
+IQR_quantity = Q3_quantity - Q1_quantity
+lower_quantity = Q1_quantity - 1.5 * IQR_quantity
+upper_quantity = Q3_quantity + 1.5 * IQR_quantity
+outlier_quantity = ecommerce_retail[
+    (ecommerce_retail['Quantity'] < lower_quantity) | 
+    (ecommerce_retail['Quantity'] > upper_quantity)
+]
+outlier_percent_quantity = len(outlier_quantity) / len(ecommerce_retail) * 100
+print(f'Outlier Quantity accounts for: {outlier_percent_quantity: .2f}%')
+
+# [In 12]: Calculate percentage of UnitPrice outliers using IQR  
+Q1_price = ecommerce_retail['UnitPrice'].quantile(0.25)
+Q3_price = ecommerce_retail['UnitPrice'].quantile(0.75)
+IQR_price = Q3_price - Q1_price
+lower_price = Q1_price - 1.5 * IQR_price
+upper_price = Q3_price + 1.5 * IQR_price
+outliers_price = ecommerce_retail[
+    (ecommerce_retail['UnitPrice'] < lower_price) | 
+    (ecommerce_retail['UnitPrice'] > upper_price)
+]
+outlier_percent_price = len(outliers_price) / len(ecommerce_retail) * 100
+print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
+
+# [In 13]: Create a new column for Revenue  
+ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['UnitPrice']
+
+# [In 14]: Filter out top 5% Revenue to handle outliers  
+threshold_98 = ecommerce_retail['Revenue'].quantile(0.95)
+ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_98]
+```
 
  
 
