@@ -251,39 +251,115 @@ This makes it easy to identify which group each customer belongs to, allowing th
 
 ## 📊 Visualization & Analysis  
 
-![image](https://github.com/user-attachments/assets/f19a0546-39f3-42b2-ae6a-65f7fd2a6a91)
+### 1. Customer Segment Distribution
 
-**🧠 Insights**
+![image](https://github.com/user-attachments/assets/fd272775-091f-4871-b153-6237e07f8ea5)  
 
-- 🔵 **Hibernating Customers** (20.29%) are the **largest group**  
-  → Long-inactive, low-value customers.
+### 2. Recency by Segment  
 
-- 🟢 **Champions** (19.41%)  
-  → Highly engaged, recent, and top-spending customers.
+![image](https://github.com/user-attachments/assets/bb5baae4-21be-4e7c-a5b8-44e5552ea045)  
 
-- 🟡 **Potential Loyalists + Loyal Customers** (~20.6%)  
-  → High potential for long-term retention if nurtured well.
+### 3. Frequency by Segment
 
-- 🔴 **Lost + At Risk** (~19.3%)  
-  → Previously active but now disengaged — high risk of churn.
+![image](https://github.com/user-attachments/assets/d2d8ef1f-834f-4013-96b2-486e3f25a6ce)
 
-- 🟠 **New Customers** (7.66%)  
-  → Low proportion, indicating limited recent acquisition.
+### 4. Monetary by Segment  
 
-**✅ Recommended**
+![image](https://github.com/user-attachments/assets/73d36f66-549e-417f-820f-7701f4f692aa)  
 
-- 🎯 *Retain Champions & Loyal Customers*  
-  → Create VIP benefits, offer exclusive early-access promotions.
+This table provides a detailed overview of each customer segment based on their average **Recency**, **Frequency**, and **Monetary** values, along with behavioral interpretation and recommended actions.
 
-- 🔄 *Re-engage Hibernating & At-Risk*  
-  → Run "We Miss You" campaigns with time-sensitive offers.
+| Segment               | Recency (days) | Frequency (orders) | Monetary (£) | Behavior Interpretation                                                                 | Suggested Action                                                   |
+|-----------------------|----------------|---------------------|--------------|------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Champions**         | 32.6           | 246.4               | 2,640,167    | Recently purchased, very frequent, very high spender → **top-tier customers**           | Offer VIP perks, exclusive deals, loyalty upgrades                 |
+| **Loyal**             | 60.2           | 108.8               | 622,787      | Consistently engaged and spending → **loyal and reliable**                              | Maintain relationship, cross-sell, reward with incentives          |
+| **Potential Loyalist**| 51.9           | 45.9                | 215,402      | Recently engaged, moderate activity → **potential long-term customer**                  | Nurture with emails, offer product bundles                         |
+| **New Customers**     | 49.8           | 9.3                 | 49,708       | Recently made first purchase → **still exploring**                                      | Welcome emails, onboarding flow, personalized recommendations      |
+| **Promising**         | 29.2           | 19.0                | 32,642       | Recently returned but still low activity                                                 | Small discounts, showcase trending items                          |
+| **Need Attention**    | 52.2           | 52.3                | 215,526      | Previously active, now declining → **signs of disengagement**                           | Send reminder emails, recommend new or trending products           |
+| **At Risk**           | 175.4          | 74.6                | 413,276      | Used to buy frequently and spend a lot → **risk of churn**                              | Win-back campaigns, feedback surveys                               |
+| **Cannot Lose Them**  | 263.6          | 91.9                | 59,857       | VIP customers who haven’t purchased in a long time → **high retention priority**        | Send personal messages, exclusive win-back offers                  |
+| **About To Sleep**    | 101.7          | 20.3                | 24,333       | Low engagement, infrequent purchases → **may become inactive soon**                     | Light re-engagement campaigns, send helpful reminders              |
+| **Hibernating**       | 174.0          | 19.8                | 259,601      | Long inactive, low value → **low potential recovery**                                   | Run discount campaigns, consider excluding from future campaigns   |
+| **Lost Customers**    | 293.5          | 8.2                 | 50,352       | Almost no recent activity → **very low value**                                          | Exclude from marketing efforts, clean from list                    |                          |
 
-- 🌱 *Nurture New & Potential Loyalists*  
-  → Use onboarding flows, referral incentives, and personalized emails.
+---
+## 💡 Insight & Recommendation  
 
-- 🧩 *Investigate Lost Customers*  
-  → Collect feedback on churn, run win-back strategies.
+### 🙋‍♂️ Customer Segmentation Strategy  
 
-- 🚀 *Improve Acquisition Funnel*  
-  → Invest in SEO/ads, optimize first-time purchase experience.
+#### 1. **Champions** *(32.6 days, 246 orders, £2.6M)*  
+Although they represent a small portion of the customer base, they contribute the **largest share of total revenue**.  
+They purchase frequently, recently, and spend significantly.
+
+➡️ **Recommendation**:  
+- Retain them with VIP programs, early access to new products, and exclusive perks.  
+- Show appreciation through personalized messages (e.g., birthday greetings, loyalty rewards).
+
+#### 2. **Loyal Customers** *(60.2 days, 109 orders, £622K)*  
+They consistently interact with the brand and place repeat orders, making them **reliable long-term customers**.
+
+➡️ **Recommendation**:  
+- Maintain connection through loyalty programs and referral bonuses.  
+- Suggest new or complementary products based on past purchases.
+
+#### 3. **Potential Loyalists & Promising**  
+- *Potential Loyalist*: 51.9 days, 45.9 orders  
+- *Promising*: 29.2 days, 19 orders  
+
+Potential Loyalists are showing signs of loyalty.  
+Promising customers have recently returned and may continue buying.
+
+➡️ **Recommendation**:  
+- Nurture them through email flows, how-to guides, and product success stories.  
+- Offer light incentives or tailored product recommendations to boost frequency and spend.
+
+#### 4. **New Customers** *(49.8 days, 9.3 orders)*  
+They have just started their purchasing journey → **high potential for growth**.
+
+➡️ **Recommendation**:  
+- Use onboarding strategies: welcome emails, tutorials, and second-purchase discounts.  
+- Monitor their behavior to tailor future engagement and segmentation.
+
+#### 5. **At Risk / Cannot Lose Them**  
+- *At Risk*: 175 days, 75 orders, £413K  
+- *Cannot Lose Them*: 264 days, 92 orders, £60K  
+
+→ These were once high-value customers, but they haven’t purchased in a long time.
+
+➡️ **Recommendation**:  
+- Send re-engagement emails: “We miss you”, “Check out what’s new”.  
+- Offer personalized incentives and collect feedback to understand disengagement.
+
+#### 6. **Need Attention & About to Sleep**  
+These customers are still active but show signs of declining engagement.
+
+➡️ **Recommendation**:  
+- Recommend trending products or seasonal promotions.  
+- Use urgency tactics (e.g., “Last chance!”) to reignite interest.
+
+#### 7. **Hibernating Customers** *(153.3 days, 15.3 orders, £260K)*  
+They made purchases a while ago but haven't returned recently.  
+Spending is moderate, but their inactivity is concerning.
+
+➡️ **Recommendation**:  
+- Run low-cost promotional campaigns to test re-engagement.  
+- If there's no response, consider excluding them from future campaigns to save budget.
+
+#### 8. **Lost Customers** *(286.9 days, 5.1 orders, £50.3K)*  
+They haven’t interacted in a long time and contribute little to revenue.  
+Unlikely to return without strong incentives.
+
+➡️ **Recommendation**:  
+- Avoid spending marketing budget on this group.  
+- Focus efforts on higher-potential or recovering segments.
+
+### 🏢 Business Recommendation  
+
+For a global retail company like SuperStore, which serves a large and diverse customer base, identifying the most impactful metric within the RFM model is essential for effective marketing and sales strategies. Among the three metrics (Recency, Frequency, and Monetary), Recency should be the top priority.
+
+Recency measures how recently a customer made a purchase. This is a strong indicator of engagement. Customers who bought recently are much more likely to respond to marketing campaigns, take advantage of promotions, and make repeat purchases. In contrast, even if a customer has purchased frequently or spent a lot in the past, a long period of inactivity may signal a loss of interest.
+
+By focusing on Recency first, teams can identify active or “warm” customers and allocate resources to those with a higher chance of conversion.
+
 
