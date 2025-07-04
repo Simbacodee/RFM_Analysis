@@ -55,22 +55,25 @@ The dataset consists of two tables (sheets):
 - Sheet 1: Ecommerce Retail – Contains transactional data from a UK-based online retail store, covering all orders between December 1, 2010 and December 9, 2011. The company specializes in selling unique all-occasion gifts. The majority of its customers are wholesalers, making this dataset well-suited for customer segmentation and purchasing behavior analysis.
 - Sheet 2: Segmentation – Contains the RFM score combinations used to classify customers into different segments. Each record maps a specific RFM score (e.g., 555, 344, 211) to a customer label such as “Loyal Customer”, “At Risk”, or “New Customer”.  
 #### 2️⃣ Table Schema & Data Snapshot  
-
-Sheet 1: Ecommerce Retail  
+  
+<details>
+  <summary><strong>Sheet 1: Ecommerce Retail</strong></summary>
 
 | Column Name | Data Type        | Description                                                                 |
 |-------------|------------------|-----------------------------------------------------------------------------|
-| InvoiceNo   | object            | Unique invoice number for each transaction (6-digit). If it starts with 'C', it indicates a cancellation. |
-| StockCode   | object            | Unique product (item) code (5-digit).                                      |
-| Description | object            | Product (item) name.                                                       |
-| Quantity    | int64             | The number of units purchased per transaction.                             |
-| InvoiceDate | datetime64[ns]    | Date and time when the transaction occurred.                               |
-| UnitPrice   | float64           | Price per unit of the product in sterling.                                 |
-| CustomerID  | float64           | Unique 5-digit identifier for each customer.                               |
-| Country     | object            | Name of the country where the customer resides.   
+| `InvoiceNo`   | object         | Unique invoice number for each transaction (6-digit). If it starts with 'C', it indicates a cancellation. |
+| `StockCode`   | object         | Unique product (item) code (5-digit).                                      |
+| `Description` | object         | Product (item) name.                                                       |
+| `Quantity`    | int64          | The number of units purchased per transaction.                             |
+| `InvoiceDate` | datetime64[ns] | Date and time when the transaction occurred.                               |
+| `UnitPrice`   | float64        | Price per unit of the product in sterling.                                 |
+| `CustomerID`  | float64        | Unique 5-digit identifier for each customer.                               |
+| `Country`     | object         | Name of the country where the customer resides.                            |
 
+</details>
 
-Sheet 2: Segmentation  
+<details>
+  <summary><strong>Sheet 2: Segmentation</strong></summary>
 
 | Segment               | RFM Scores                                                                                                   |
 |------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -84,8 +87,9 @@ Sheet 2: Segmentation
 | **At Risk**            | 255, 254, 245, 244, 253, 252, 243, 242, 235, 234, 225, 224, 153, 152, 145, 143, 142, 135, 134, 133, 125, 124  |
 | **Cannot Lose Them**   | 155, 154, 144, 214, 215, 115, 114, 113                                                                       |
 | **Hibernating**        | 332, 322, 233, 232, 223, 222, 132, 123, 122, 212, 211                                                        |
-| **Lost Customers**     | 111, 112, 121, 131, 141, 151    
+| **Lost Customers**     | 111, 112, 121, 131, 141, 151                                                                                 |
 
+</details>   
 
 ---
 
