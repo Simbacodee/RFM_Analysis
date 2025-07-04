@@ -157,141 +157,95 @@ To understand the data structure and assess its quality, the following initial s
 
 The following steps were performed to clean the dataset and prepare it for segmentation:  
 
- [In 4]: 
-```python
-# Remove duplicate rows  
-ecommerce_retail = ecommerce_retail.drop_duplicates()
-```
- [In 5]: 
-```python
-# Remove rows with missing CustomerID  
-ecommerce_retail = ecommerce_retail.dropna(subset=['CustomerID'])
-```
- [In 6]:
-```python
-# Keep only rows where Quantity > 0  
-ecommerce_retail = ecommerce_retail[ecommerce_retail['Quantity'] > 0]
-```
- [In 7]: 
-```python
-# Keep only rows where UnitPrice > 0  
-ecommerce_retail = ecommerce_retail[ecommerce_retail['UnitPrice'] > 0]
-```
- [In 8]: 
-```python
-# Keep only rows with valid StockCode (5-digit numbers)  
-ecommerce_retail = ecommerce_retail[
-    ecommerce_retail['StockCode'].astype(str).str.fullmatch(r'\d{5}')
-]
-```
-[In 9]: 
-```python
-# Visualize outliers in Quantity  
-plt.figure(figsize=(10, 4))
-sns.boxplot(x=ecommerce_retail['Quantity'])
-plt.title('Boxplot of Quantity')
-plt.show()
-```
-[Out 9]:  
+Step 1: Remove duplicate rows  
 
-![image](https://github.com/user-attachments/assets/1fd7f406-6c46-4d02-abcf-c7e91fa758ce)
+Step 2: Drop rows with missing values  
 
-[In 10]: 
-```python
-# Visualize outliers in UnitPrice  
-plt.figure(figsize=(10, 4))
-sns.boxplot(x=ecommerce_retail['UnitPrice'])
-plt.title('Boxplot of Unit Price')
-plt.show()
-```
-[Out 10]: 
+Step 3: Filter rows where Quantity > 0 and UnitPrice > 0  
+
+Step 4: Keep rows with valid StockCode (5-digit numeric format)  
+
+Step 5: Detect outliers in Quantity and UnitPrice  
+
+![image](https://github.com/user-attachments/assets/1fd7f406-6c46-4d02-abcf-c7e91fa758ce)  
 
 ![image](https://github.com/user-attachments/assets/292c3f42-47f5-41a5-8052-117567d62721)
 
-[In 11]:
-
-```python
-# Calculate percentage of Quantity outliers using IQR  
-Q1_quantity = ecommerce_retail['Quantity'].quantile(0.25)
-Q3_quantity = ecommerce_retail['Quantity'].quantile(0.75)
-IQR_quantity = Q3_quantity - Q1_quantity
-lower_quantity = Q1_quantity - 1.5 * IQR_quantity
-upper_quantity = Q3_quantity + 1.5 * IQR_quantity
-outlier_quantity = ecommerce_retail[
-    (ecommerce_retail['Quantity'] < lower_quantity) | 
-    (ecommerce_retail['Quantity'] > upper_quantity)
-]
-outlier_percent_quantity = len(outlier_quantity) / len(ecommerce_retail) * 100
-print(f'Outlier Quantity accounts for: {outlier_percent_quantity: .2f}%')
-
-# Calculate percentage of UnitPrice outliers using IQR  
-Q1_price = ecommerce_retail['UnitPrice'].quantile(0.25)
-Q3_price = ecommerce_retail['UnitPrice'].quantile(0.75)
-IQR_price = Q3_price - Q1_price
-lower_price = Q1_price - 1.5 * IQR_price
-upper_price = Q3_price + 1.5 * IQR_price
-outliers_price = ecommerce_retail[
-    (ecommerce_retail['UnitPrice'] < lower_price) | 
-    (ecommerce_retail['UnitPrice'] > upper_price)
-]
-outlier_percent_price = len(outliers_price) / len(ecommerce_retail) * 100
-print(f'Outlier UnitPrice accounts for: {outlier_percent_price: .2f}%')
-```
-[Out 11]:
-
-![image](https://github.com/user-attachments/assets/e4ba9c01-c45a-4454-8a05-514b9703cbe6)
-
-> ⚠️ **Note:** Since the percentage of outliers in `Quantity` (~6.5%) and `UnitPrice` (~8.8%) is significant,  
-> instead of removing them directly, we chose to cap extreme values based on the **98th percentile of Revenue**.
-
-[In 12]: 
-```python
-# Create a new column for Revenue  
-ecommerce_retail['Revenue'] = ecommerce_retail['Quantity'] * ecommerce_retail['UnitPrice']
-# Filter out top 5% Revenue to handle outliers  
-threshold_98 = ecommerce_retail['Revenue'].quantile(0.95)
-ecommerce_retail_98 = ecommerce_retail[ecommerce_retail['Revenue'] <= threshold_98]
-```
----
+Step 6: Handle outliers using appropriate techniques
 
 ## 🧮 Apply RFM Model  
 
-[In 13]: 
-```python
-# Generate RFM (Recency, Frequency, Monetary) table for customer segmentation  
-snapshot_date = pd.to_datetime('2011-12-31')
-ecom_filtered = ecommerce_retail_98[ecommerce_retail_98['InvoiceDate'] <= snapshot_date]
-rfm = ecom_filtered.groupby('CustomerID').agg({
-    'InvoiceDate': lambda x: (snapshot_date - x.max()).days,
-    'InvoiceNo': 'count',
-    'Revenue': 'sum'
-}).reset_index()
+### 📌 What is RFM?
 
-rfm.columns = ['CustomerID','Recency', 'Frequency', 'Monetary']
-```
-[In 14]: 
-```python
-# Score each customer based on Recency, Frequency, and Monetary value (RFM),
-# then map combined RFM scores to predefined customer segments
+Helps identify the most valuable customers for marketers by analyzing customer behavior.
 
-rfm['R_score'] = pd.qcut(rfm['Recency'], q=5, labels=[5, 4, 3, 2, 1])
-rfm['F_score'] = pd.qcut(rfm['Frequency'], q=5, labels=[1, 2, 3, 4, 5])
-rfm['M_score'] = pd.qcut(rfm['Monetary'], q=5, labels=[1, 2, 3, 4, 5])
+- **Recency:** When was the customer’s last purchase?
 
-rfm['RFM_score'] = rfm['R_score'].astype(str) + rfm['F_score'].astype(str) + rfm['M_score'].astype(str)
+→ Indicates the level of engagement and potential interest. Customers who purchased recently are more likely to respond positively to marketing campaigns and promotions.
 
-segmentation_data = segmentation_data.rename(columns={"RFM Score": "RFM_score"})
+- **Frequency:** How often does the customer make a purchase?
 
-df_segment = segmentation_data.assign(
-    RFM_score=segmentation_data['RFM_score'].astype(str).str.split(', ')
-).explode('RFM_score')
+→ Measures loyalty and long-term engagement. Frequent buyers tend to have higher retention and can be targeted with loyalty programs or exclusive offers.
 
-rfm_segmented = pd.merge(rfm, df_segment, how='left', on='RFM_score')
+- **Monetary:** How much does the customer spend?
 
-```
-[Out 14]:
+→ Reflects the value and revenue contribution of the customer. High spenders contribute significantly to total revenue and may deserve special perks or recognition.
 
-![image](https://github.com/user-attachments/assets/a064feda-02e9-4078-8eb4-7eb3c6c7f3e9)
+The objective is to segment customers based on their activity and value to facilitate targeted marketing and retention strategies.  
+
+### 🧮 Main Process  
+
+#### Step 1: Calculating the three RFM behavioral metrics  
+
+- **Recency:** Number of days since the customer's most recent purchase up to the analysis date.
+
+- **Frequency:** Total number of orders the customer has placed up to the analysis date.
+
+- **Monetary:** Total revenue the customer has spent up to the analysis date.
+
+![image](https://github.com/user-attachments/assets/a2f64a44-d3ff-4df2-b79f-faf1d29da37b)  
+
+#### Step 2: Scoring customers based on RFM values  
+
+After calculating the Recency, Frequency, and Monetary values, each customer is assigned an R, F, and M score using quintiles — dividing all customers into five equally sized groups for each metric.
+
+**Why use quintiles instead of quartiles or deciles?**  
+
+✅ Balanced granularity: Quintiles provide enough segmentation without overcomplicating the model.
+
+✅ Easy to interpret: A consistent score range from 1 to 5 makes the results intuitive and easy to communicate.
+
+✅ Standardized scoring: All three metrics are mapped to the same scale, making them easy to combine into a unified RFM score.
+
+**How scores are assigned:**  
+
+**Recency (R):** Customers who purchased more recently are considered more engaged.  
+
+→ Customers with the lowest recency values (i.e., most recent purchases) receive R = 5, and those with the highest values receive R = 1.
+
+**Frequency (F):** Customers who purchase more often are more loyal.  
+
+→ The most frequent buyers receive F = 5, and the least frequent receive F = 1.
+
+**Monetary (M):** Customers who spend more contribute more value.  
+
+→ The highest spenders receive M = 5, and the lowest spenders receive M = 1.
+
+![image](https://github.com/user-attachments/assets/258cd7ea-867b-4e9a-ae1a-6e50b99f26a9)  
+
+#### Step 3: Creating the combined RFM score  
+
+After assigning individual scores for **Recency**, **Frequency**, and **Monetary**, the three scores are concatenated into a three-digit string. Each customer is assigned a unique RFM score (e.g., 543, 215, 355) that represents their purchasing behavior.  
+
+![image](https://github.com/user-attachments/assets/9fdc5f59-ee58-40b5-a14a-70d323d1a6e3)  
+
+#### Step 4: Assigning customer segments  
+
+After generating the RFM score (e.g., 543, 215...), each score is matched to a specific customer group based on a predefined segmentation table.
+
+This makes it easy to identify which group each customer belongs to, allowing the business to apply appropriate strategies such as offering promotions, providing personalized care, or encouraging repeat purchases.  
+
+![image](https://github.com/user-attachments/assets/70911ad7-4ad0-42cb-8ad7-22856f49eb0f)
 
 ---
 
