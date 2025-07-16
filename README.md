@@ -306,33 +306,56 @@ To simplify customer segmentation and enhance strategic planning efficiency, the
 
 ### 🙋‍♂️ Customer Segmentation Strategy  
 
-#### **1. Core Customers (Champions, Loyal, Potential Loyalist)**
-**Traits:** Buy frequently, purchased recently, and spend a lot.  
-**Strategy:**
-- Maintain strong relationships with regular appreciation or loyalty offers.  
-- Encourage product reviews or referrals.  
-- Prioritize them when launching new products or campaigns.
+#### 1️⃣ Core Value Customers  
+**Includes:** Champions, Loyal, Potential Loyalist  
+**Traits:** Represent ~40% of customers and contribute the largest share of revenue.  
+- Very high purchase frequency, recent transactions (within 30–60 days), and high spending.  
+- Act as the financial backbone of the business; highly responsive to upsell and cross-sell.  
+- Potential Loyalists show strong signs of future long-term value.
 
-#### **2. Nurture & Develop (New Customers, Promising, Need Attention)**
-**Traits:** Recently purchased or showing early potential but not consistent yet.  
-**Strategy:**
-- Send welcome emails and product recommendations.  
-- Offer a small discount to encourage a second purchase.  
-- Send gentle reminders if inactive for a short time.
+**Recommended Actions:**  
+- Provide VIP benefits and loyalty privileges.  
+- Encourage reviews or referrals.  
+- Prioritize for customer service and new product campaigns.
 
-#### **3. At Risk of Churning (At Risk, Cannot Lose Them)**
-**Traits:** Used to buy often or spend a lot but haven’t purchased in a while.  
-**Strategy:**
-- Send a “We miss you” message with a time-limited offer.  
-- Ask for feedback to understand why they stopped purchasing.  
-- Try to re-engage with a valuable incentive.
+#### 2️⃣ Nurture & Growth Segment  
+**Includes:** New Customers, Promising, Need Attention  
+**Traits:** Around 16% of customers; in early-stage engagement or beginning to decline.  
+- Recent purchases but irregular, low-to-mid frequency, and modest spending.  
+- Can be cultivated into loyal customers with proper engagement.
 
-#### **4. Low or Lost Value (About to Sleep, Hibernating, Lost Customers)**
-**Traits:** Inactive for a long time, low spenders.  
-**Strategy:**
-- Send a simple reactivation offer or final discount.  
-- If no response over time, stop investing in this group.  
-- Focus resources on higher-potential segments.
+**Recommended Actions:**  
+- Send welcome/onboarding emails.  
+- Suggest product bundles or apply light discounts to trigger repeat purchases.  
+- Set up inactivity triggers and gentle nudges.
+
+#### 3️⃣ At Risk Segment  
+**Includes:** At Risk, Cannot Lose Them  
+**Traits:** Nearly 11% of customers; high past value but long periods of inactivity.  
+- Previously frequent buyers with high spend, but last purchase was 6+ months ago.  
+- May be considering competitors or have unmet needs.
+
+**Recommended Actions:**  
+- Launch “We miss you” campaigns with time-limited offers.  
+- Personalize messages based on purchase history.  
+- Conduct surveys to identify disengagement reasons.
+
+#### 4️⃣ Churned / Low Value Segment  
+**Includes:** About to Sleep, Hibernating, Lost Customers  
+**Traits:** Roughly 33% of customers with low activity, low spend, and long inactivity.  
+- Frequency < 20 orders, Recency 100–290+ days, low monetary value.  
+- Limited recovery potential except a few Hibernating cases.
+
+**Recommended Actions:**  
+- Try simple reactivation (e.g., free shipping or small voucher).  
+- If no response after 1–2 attempts → remove from active marketing list.  
+- Use selectively for A/B testing only, avoid further budget allocation.
+
+#### ✅ Strategic Summary  
+- **Prioritize investment** in **Core Value Customers** to maintain stable revenue and deepen loyalty.  
+- **Selectively nurture** the **Nurture & Growth** segment to convert them into high-value customers through personalized engagement.  
+- **Implement early warning mechanisms** and recovery plans for the **At Risk** segment to prevent silent churn.  
+- **Optimize marketing costs** by **discontinuing investment** in **Churned / Low Value** customers unless specific recovery signals appear.
 
 
 ### 🏢 Business Recommendation  
