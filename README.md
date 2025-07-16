@@ -286,73 +286,54 @@ This table provides a detailed overview of each customer segment based on their 
 ---
 ## 💡 Insight & Recommendation  
 
+To simplify customer segmentation and enhance strategic planning efficiency, the original RFM segments have been consolidated into broader groups based on behavioral characteristics. Maintaining too many detailed segments can hinder decision-making, disperse resources, and reduce implementation effectiveness. Grouping customers with similar behaviors, engagement levels, and value contributions allows for clearer prioritization and more effective allocation of budgets, personnel, and marketing efforts. This approach not only streamlines the analytical framework but also ensures better alignment between customer value and investment strategy.
+
+#### **1. Core Value Customers**  
+**Includes:** Champions, Loyal, Potential Loyalist  
+**Reason for grouping:** These customers purchase frequently, spend significantly, and are highly engaged or show strong long-term potential. They generate most of the revenue and should be prioritized for retention and value maximization.  
+
+#### **2. Nurture & Growth**  
+**Includes:** New Customers, Promising, Need Attention  
+**Reason for grouping:** These customers are either new, recently re-engaged, or starting to decline. They hold potential for growth if nurtured properly through engagement and personalized offers.  
+
+#### **3. At Risk & Retention**  
+**Includes:** At Risk, Cannot Lose Them  
+**Reason for grouping:** Previously high-value customers who haven't purchased for a while. They are at high risk of churn and require immediate win-back strategies to restore engagement.  
+
+#### **4. Churned / Low Value**  
+**Includes:** About To Sleep, Hibernating, Lost Customers  
+**Reason for grouping:** These customers have low engagement, low spending, and long inactivity. They offer limited recovery potential and should be deprioritized or removed from active campaigns.  
+
 ### 🙋‍♂️ Customer Segmentation Strategy  
 
-#### 1. **Champions** *(32.6 days, 246 orders, £2.6M)*  
-Although they represent a small portion of the customer base, they contribute the **largest share of total revenue**.  
-They purchase frequently, recently, and spend significantly.
+#### **1. Core Customers (Champions, Loyal, Potential Loyalist)**
+**Traits:** Buy frequently, purchased recently, and spend a lot.  
+**Strategy:**
+- Maintain strong relationships with regular appreciation or loyalty offers.  
+- Encourage product reviews or referrals.  
+- Prioritize them when launching new products or campaigns.
 
-➡️ **Recommendation**:  
-- Retain them with VIP programs, early access to new products, and exclusive perks.  
-- Show appreciation through personalized messages (e.g., birthday greetings, loyalty rewards).
+#### **2. Nurture & Develop (New Customers, Promising, Need Attention)**
+**Traits:** Recently purchased or showing early potential but not consistent yet.  
+**Strategy:**
+- Send welcome emails and product recommendations.  
+- Offer a small discount to encourage a second purchase.  
+- Send gentle reminders if inactive for a short time.
 
-#### 2. **Loyal Customers** *(60.2 days, 109 orders, £622K)*  
-They consistently interact with the brand and place repeat orders, making them **reliable long-term customers**.
+#### **3. At Risk of Churning (At Risk, Cannot Lose Them)**
+**Traits:** Used to buy often or spend a lot but haven’t purchased in a while.  
+**Strategy:**
+- Send a “We miss you” message with a time-limited offer.  
+- Ask for feedback to understand why they stopped purchasing.  
+- Try to re-engage with a valuable incentive.
 
-➡️ **Recommendation**:  
-- Maintain connection through loyalty programs and referral bonuses.  
-- Suggest new or complementary products based on past purchases.
+#### **4. Low or Lost Value (About to Sleep, Hibernating, Lost Customers)**
+**Traits:** Inactive for a long time, low spenders.  
+**Strategy:**
+- Send a simple reactivation offer or final discount.  
+- If no response over time, stop investing in this group.  
+- Focus resources on higher-potential segments.
 
-#### 3. **Potential Loyalists & Promising**  
-- *Potential Loyalist*: 51.9 days, 45.9 orders  
-- *Promising*: 29.2 days, 19 orders  
-
-Potential Loyalists are showing signs of loyalty.  
-Promising customers have recently returned and may continue buying.
-
-➡️ **Recommendation**:  
-- Nurture them through email flows, how-to guides, and product success stories.  
-- Offer light incentives or tailored product recommendations to boost frequency and spend.
-
-#### 4. **New Customers** *(49.8 days, 9.3 orders)*  
-They have just started their purchasing journey → **high potential for growth**.
-
-➡️ **Recommendation**:  
-- Use onboarding strategies: welcome emails, tutorials, and second-purchase discounts.  
-- Monitor their behavior to tailor future engagement and segmentation.
-
-#### 5. **At Risk / Cannot Lose Them**  
-- *At Risk*: 175 days, 75 orders, £413K  
-- *Cannot Lose Them*: 264 days, 92 orders, £60K  
-
-→ These were once high-value customers, but they haven’t purchased in a long time.
-
-➡️ **Recommendation**:  
-- Send re-engagement emails: “We miss you”, “Check out what’s new”.  
-- Offer personalized incentives and collect feedback to understand disengagement.
-
-#### 6. **Need Attention & About to Sleep**  
-These customers are still active but show signs of declining engagement.
-
-➡️ **Recommendation**:  
-- Recommend trending products or seasonal promotions.  
-- Use urgency tactics (e.g., “Last chance!”) to reignite interest.
-
-#### 7. **Hibernating Customers** *(153.3 days, 15.3 orders, £260K)*  
-They made purchases a while ago but haven't returned recently.  
-Spending is moderate, but their inactivity is concerning.
-
-➡️ **Recommendation**:  
-- Run low-cost promotional campaigns to test re-engagement.  
-- If there's no response, consider excluding them from future campaigns to save budget.
-
-#### 8. **Lost Customers** *(286.9 days, 5.1 orders, £50.3K)*  
-They haven’t interacted in a long time and contribute little to revenue.  
-Unlikely to return without strong incentives.
-
-➡️ **Recommendation**:  
-- Avoid spending marketing budget on this group.  
-- Focus efforts on higher-potential or recovering segments.
 
 ### 🏢 Business Recommendation  
 
