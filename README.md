@@ -157,21 +157,21 @@ To understand the data structure and assess its quality, the following initial s
 
 The following steps were performed to clean the dataset and prepare it for segmentation:  
 
-Step 1: Remove duplicate rows  
+**Step 1:** Remove duplicate rows  
 
-Step 2: Drop rows with missing values  
+**Step 2:** Drop rows with missing values  
 
-Step 3: Filter rows where Quantity > 0 and UnitPrice > 0  
+**Step 3:** Filter rows where Quantity > 0 and UnitPrice > 0  
 
-Step 4: Keep rows with valid StockCode (5-digit numeric format)  
+**Step 4:** Keep rows with valid StockCode (5-digit numeric format)  
 
-Step 5: Detect outliers in Quantity and UnitPrice  
+**Step 5:** Detect outliers in Quantity and UnitPrice  
 
 ![image](https://github.com/user-attachments/assets/1fd7f406-6c46-4d02-abcf-c7e91fa758ce)  
 
 ![image](https://github.com/user-attachments/assets/292c3f42-47f5-41a5-8052-117567d62721)
 
-Step 6: Handle outliers using appropriate techniques
+**Step 6:** Handle outliers using appropriate techniques
 
 ## 🧮 Apply RFM Model  
 
