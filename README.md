@@ -221,15 +221,15 @@ After calculating the Recency, Frequency, and Monetary values, each customer is 
 
 **Recency (R):** Customers who purchased more recently are considered more engaged.  
 
-→ Customers with the lowest recency values (i.e., most recent purchases) receive R = 5, and those with the highest values receive R = 1.
+→ Customers with the **lowest recency values** (i.e., most recent purchases) receive **R = 5**, and those with the **highest values** receive **R = 1**.
 
 **Frequency (F):** Customers who purchase more often are more loyal.  
 
-→ The most frequent buyers receive F = 5, and the least frequent receive F = 1.
+→ The **most frequent buyers** receive **F = 5**, and the **least frequent** receive **F = 1**.
 
 **Monetary (M):** Customers who spend more contribute more value.  
 
-→ The highest spenders receive M = 5, and the lowest spenders receive M = 1.
+→ The **highest spenders** receive **M = 5**, and the **lowest spenders** receive **M = 1**.
 
 ![image](https://github.com/user-attachments/assets/258cd7ea-867b-4e9a-ae1a-6e50b99f26a9)  
 
