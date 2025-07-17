@@ -349,7 +349,6 @@ To simplify customer segmentation and enhance strategic planning efficiency, the
 **Recommended Actions:**  
 - Try simple reactivation (e.g., free shipping or small voucher).  
 - If no response after 1–2 attempts → remove from active marketing list.  
-- Use selectively for A/B testing only, avoid further budget allocation.
 
 #### ✅ Strategic Summary  
 - **Prioritize investment** in **Core Value Customers** to maintain stable revenue and deepen loyalty.  
